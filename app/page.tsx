@@ -78,7 +78,7 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <section className="relative h-[600px] md:h-[700px]">
         <Image
-          src="/images/placeholders/pazzo_slide_74.jpg"
+          src="/images/placeholders/pazzo_slide_74.webp"
           alt="Pocopson Veterinary Station - Historic railroad building"
           fill
           className="object-cover"
@@ -170,7 +170,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/placeholders/pazzo-slide-09.jpg"
+                src="/images/placeholders/pazzo-slide-09.webp"
                 alt="Historic train station at Pocopson Vet"
                 fill
                 className="object-cover"

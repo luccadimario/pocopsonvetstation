@@ -11,7 +11,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative h-[500px]">
         <Image
-          src="/images/placeholders/pazzo_slide_79.jpg"
+          src="/images/placeholders/pazzo_slide_79.webp"
           alt="Contact Pocopson Vet"
           fill
           className="object-cover"

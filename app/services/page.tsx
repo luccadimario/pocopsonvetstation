@@ -90,7 +90,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="relative h-[500px]">
         <Image
-          src="/images/placeholders/pazzo_slide_77.jpg"
+          src="/images/placeholders/pazzo_slide_77.webp"
           alt="Veterinarian caring for happy pets"
           fill
           className="object-cover"

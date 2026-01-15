@@ -70,7 +70,7 @@ export default function NewClientsPage() {
       {/* Hero */}
       <section className="relative h-[500px]">
         <Image
-          src="/images/placeholders/pazzo-slide-09.jpg"
+          src="/images/placeholders/pazzo-slide-09.webp"
           alt="Happy pet owner with dog at Pocopson Vet"
           fill
           className="object-cover"

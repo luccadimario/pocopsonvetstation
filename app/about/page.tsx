@@ -9,7 +9,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[500px]">
         <Image
-          src="/images/placeholders/pvs.jpg"
+          src="/images/placeholders/pvs.webp"
           alt="Happy pet owner with dog at Pocopson Vet"
           fill
           className="object-cover"
@@ -87,7 +87,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/placeholders/pazzo_slide_77.jpg"
+                src="/images/placeholders/pazzo_slide_77.webp"
                 alt="Historic train station building at Pocopson Vet"
                 fill
                 className="object-cover"
