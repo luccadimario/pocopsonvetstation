@@ -92,7 +92,8 @@ export default function ServicesPage() {
         <Image
           src="/images/placeholders/pazzo_slide_77.webp"
           alt="Veterinarian caring for happy pets"
-          fill
+          width={1920}
+          height={1080}
           className="object-cover"
           priority
           loading="eager"
