@@ -13,8 +13,7 @@ export default function ContactPage() {
         <Image
           src="/images/placeholders/pazzo_slide_79.webp"
           alt="Contact Pocopson Vet"
-          width={1920}
-          height={1080}
+          fill
           className="object-cover"
           priority
           loading="eager"

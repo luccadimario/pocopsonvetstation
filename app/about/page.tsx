@@ -11,8 +11,7 @@ export default function AboutPage() {
         <Image
           src="/images/placeholders/pvs.webp"
           alt="Happy pet owner with dog at Pocopson Vet"
-          width={1920}
-          height={1080}
+          fill
           className="object-cover"
           priority
           loading="eager"

@@ -72,8 +72,7 @@ export default function NewClientsPage() {
         <Image
           src="/images/placeholders/pazzo-slide-09.webp"
           alt="Happy pet owner with dog at Pocopson Vet"
-          width={1920}
-          height={1080}
+          fill
           className="object-cover"
           priority
           loading="eager"

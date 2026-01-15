@@ -90,10 +90,9 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="relative h-[500px]">
         <Image
-          src="/images/placeholders/pazzo_slide_77.webp"
+          src="/images/placeholders/pazzo_slide_77.jpg"
           alt="Veterinarian caring for happy pets"
-          width={1920}
-          height={1080}
+          fill
           className="object-cover"
           priority
           loading="eager"
