@@ -7,14 +7,14 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[500px] bg-gray-800">
         <Image
-          src="/images/placeholders/pvs.webp"
+          src="/images/placeholders/pvs_q55.webp"
           alt="Happy pet owner with dog at Pocopson Vet"
           fill
           className="object-cover"
           priority
-          loading="eager"
+          sizes="100vw"
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
@@ -85,12 +85,13 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gray-700">
               <Image
                 src="/images/placeholders/pazzo_slide_77.webp"
                 alt="Historic train station building at Pocopson Vet"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

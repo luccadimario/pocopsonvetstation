@@ -9,14 +9,14 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[500px] bg-gray-800">
         <Image
           src="/images/placeholders/pazzo_slide_79.webp"
           alt="Contact Pocopson Vet"
           fill
           className="object-cover"
           priority
-          loading="eager"
+          sizes="100vw"
         />
 
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">

@@ -76,13 +76,14 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section with Background Image */}
-      <section className="relative h-[600px] md:h-[700px]">
+      <section className="relative h-[600px] md:h-[700px] bg-gray-800">
         <Image
           src="/images/placeholders/pazzo_slide_74.webp"
           alt="Pocopson Veterinary Station - Historic railroad building"
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
@@ -168,12 +169,13 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl bg-gray-700">
               <Image
                 src="/images/placeholders/pazzo-slide-09.webp"
                 alt="Historic train station at Pocopson Vet"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div>
