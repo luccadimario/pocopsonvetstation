@@ -75,6 +75,7 @@ export default function NewClientsPage() {
           fill
           className="object-cover"
           priority
+          loading="eager"
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
