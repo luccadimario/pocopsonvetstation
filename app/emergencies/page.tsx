@@ -25,16 +25,28 @@ export default function EmergenciesPage() {
 
   const emergencyContacts = [
     {
-      name: "VCA Emergency Animal Hospital",
-      phone: "(610) 647-2777",
-      address: "301 Veterans Highway, Chadds Ford, PA 19317",
-      hours: "24/7 Emergency Care",
+      name: "Veterinary Referral Center (VRC)",
+      phone: "(610) 647-2950",
+      address: "340 Lancaster Ave, Malvern, PA 19355",
+      hours: "24/7 Emergency & Specialty Care",
     },
     {
-      name: "Penn Vet Ryan Hospital",
-      phone: "(215) 898-4685",
-      address: "3900 Delancey Street, Philadelphia, PA 19104",
-      hours: "24/7 Emergency & Critical Care",
+      name: "Pinnacle Veterinary Specialists",
+      phone: "(610) 477-8797",
+      address: "600 Evergreen Dr, Suite 110, Glen Mills, PA 19342",
+      hours: "24/7 Emergency & Specialty Care",
+    },
+    {
+      name: "BluePearl Pet Hospital",
+      phone: "(610) 296-2099",
+      address: "40 Three Tun Rd, Malvern, PA 19355",
+      hours: "24/7 Emergency & Specialty Care",
+    },
+    {
+      name: "Metropolitan Veterinary Associates",
+      phone: "(610) 666-1050",
+      address: "2626 Van Buren Ave, Norristown, PA 19403",
+      hours: "24/7 Emergency & Specialty Care",
     },
   ];
 
@@ -122,7 +134,7 @@ export default function EmergenciesPage() {
                       During Our Business Hours
                     </CardTitle>
                     <CardDescription className="text-green-700 text-base">
-                      Mon-Thu: 8AM-7PM | Fri: 8AM-5PM | Sat: 8AM-12PM
+                      Mon & Thu: 8AM-6PM | Tue, Wed, Fri: 8AM-5PM | Sat: 8AM-12PM
                     </CardDescription>
                   </div>
                 </div>

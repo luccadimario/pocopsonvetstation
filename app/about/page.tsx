@@ -41,11 +41,14 @@ export default function AboutPage() {
               "We are dedicated to providing the highest level of veterinary
               medicine along with friendly, compassionate service."
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-4">
               We treat every patient as if they were our own pet, giving them
               the same loving care and attention we'd want for our furry family
               members.
             </p>
+            <div className="inline-block bg-green-100 text-green-700 px-6 py-3 rounded-full text-lg font-medium">
+              Proudly Independent & Locally Owned Since 1991
+            </div>
           </div>
         </div>
       </section>

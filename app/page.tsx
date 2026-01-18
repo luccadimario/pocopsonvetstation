@@ -14,6 +14,7 @@ import {
   Phone,
   Star,
   Stethoscope,
+  Store,
   Syringe,
   Zap,
 } from "lucide-react";
@@ -46,7 +47,8 @@ export default function Home() {
     {
       icon: Zap,
       title: "Surgical Laser",
-      description: "Advanced CO2 laser surgery for precise, less invasive procedures",
+      description:
+        "Advanced CO2 laser surgery for precise, less invasive procedures",
     },
     {
       icon: Stethoscope,
@@ -88,8 +90,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
-            <div className="inline-block bg-cream-100 text-burgundy-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Historic Railroad Station Since 1893
+            <div className="flex flex-wrap gap-3 mb-6">
+              <div className="inline-block bg-cream-100 text-burgundy-500 px-4 py-2 rounded-full text-sm font-medium">
+                Historic Railroad Station Since 1893
+              </div>
+              <div className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                Proudly Independent & Locally Owned
+              </div>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
               Where Every Pet Is Family
@@ -268,7 +275,7 @@ export default function Home() {
               More than just a vet - we're your partner in pet wellness
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center p-6 rounded-2xl hover:bg-cream-50/50 transition-colors">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-burgundy-100 to-burgundy-50 flex items-center justify-center mx-auto mb-4">
                 <Heart className="h-10 w-10 text-burgundy-500" />
@@ -276,7 +283,7 @@ export default function Home() {
               <h3 className="text-xl font-heading font-bold mb-3 text-burgundy-600">
                 Compassionate Team
               </h3>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600">
                 Our loving staff treats every pet like their own. We understand
                 the special bond you share!
               </p>
@@ -288,7 +295,7 @@ export default function Home() {
               <h3 className="text-xl font-heading font-bold mb-3 text-burgundy-600">
                 Advanced Care
               </h3>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600">
                 Modern technology meets gentle touch with our digital X-rays,
                 surgical laser, and more
               </p>
@@ -300,9 +307,21 @@ export default function Home() {
               <h3 className="text-xl font-heading font-bold mb-3 text-burgundy-600">
                 Trusted Since 1991
               </h3>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600">
                 Three decades of exceptional care from our charming historic
                 station
+              </p>
+            </div>
+            <div className="text-center p-6 rounded-2xl hover:bg-cream-50/50 transition-colors">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center mx-auto mb-4">
+                <Store className="h-10 w-10 text-green-600" />
+              </div>
+              <h3 className="text-xl font-heading font-bold mb-3 text-green-700">
+                Proudly Independent
+              </h3>
+              <p className="text-gray-600">
+                Locally owned and operated, not a corporation. Your pets get
+                personal attention, not a number.
               </p>
             </div>
           </div>

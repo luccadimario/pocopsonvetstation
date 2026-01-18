@@ -17,7 +17,7 @@ export function Footer() {
               Pocopson Veterinary Station
             </h3>
             <p className="text-sm mb-4">
-              Providing compassionate care for your furry family members since 1893 from our historic railroad station in West Chester, PA.
+              Providing compassionate care for your furry family members since 1893 from our historic railroad station in West Chester, PA. Proudly independent and locally owned.
             </p>
           </div>
 
