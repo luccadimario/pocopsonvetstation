@@ -16,6 +16,14 @@ export const navigation = [
     href: "/new-clients",
   },
   {
+    name: "Prescription Refill",
+    href: "/prescription-refill",
+  },
+  {
+    name: "Adoptions",
+    href: "/adoptions",
+  },
+  {
     name: "Emergencies",
     href: "/emergencies",
   },

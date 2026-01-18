@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Roboto_Slab } from "next/font/google";
+import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -37,6 +38,25 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Toaster position="top-right" />
+
+        {/* Otto Flow Widget */}
+        <Script
+          id="otto-widget"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function (id, win, doc) {
+                win.televet = win.televet || { id };
+                win.otto = win.otto || { id };
+                var o = doc.createElement('script');
+                o.async = true;
+                o.src = 'https://connect.televet.com/shim.js';
+                var r = doc.getElementsByTagName('script')[0];
+                r.parentNode.insertBefore(o, r);
+              })('cm8xkm8ux074h2x015e38ukb4', window, document);
+            `,
+          }}
+        />
       </body>
     </html>
   );

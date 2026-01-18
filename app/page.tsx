@@ -45,8 +45,8 @@ export default function Home() {
     },
     {
       icon: Zap,
-      title: "Laser Therapy",
-      description: "Modern CO2 and therapy laser treatments for faster healing",
+      title: "Surgical Laser",
+      description: "Advanced CO2 laser surgery for precise, less invasive procedures",
     },
     {
       icon: Stethoscope,
@@ -85,6 +85,7 @@ export default function Home() {
           priority
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
             <div className="inline-block bg-cream-100 text-burgundy-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -95,7 +96,15 @@ export default function Home() {
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/95">
               Compassionate veterinary care in the heart of West Chester. Your
-              pets deserve the very best! 🐾
+              pets deserve the very best!{" "}
+              <Image
+                src="/images/placeholders/dogcuteanimation31.gif"
+                alt="Happy dog wagging tail"
+                width={50}
+                height={50}
+                className="inline-block align-middle"
+                unoptimized
+              />
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -281,7 +290,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-600 text-lg">
                 Modern technology meets gentle touch with our digital X-rays,
-                laser therapy, and more
+                surgical laser, and more
               </p>
             </div>
             <div className="text-center p-6 rounded-2xl hover:bg-cream-50/50 transition-colors">
@@ -348,9 +357,9 @@ export default function Home() {
               <Clock className="h-12 w-12 text-burgundy-500 mx-auto mb-4" />
               <h3 className="text-lg font-heading font-bold mb-2">Hours</h3>
               <p className="text-gray-600 text-sm">
-                Mon-Thu: 8AM-7PM
+                Mon & Thu: 8AM-6PM
                 <br />
-                Fri: 8AM-5PM
+                Tue, Wed, Fri: 8AM-5PM
                 <br />
                 Sat: 8AM-12PM
               </p>

@@ -16,6 +16,7 @@ export default function AboutPage() {
           priority
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">

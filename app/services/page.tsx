@@ -19,7 +19,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesPage() {
-  const services = [
+  const services: {
+    icon: typeof Stethoscope;
+    title: string;
+    description: string;
+    color: string;
+    learnMore?: string;
+  }[] = [
     {
       icon: Stethoscope,
       title: "Wellness Exams & Consultations",
@@ -50,10 +56,11 @@ export default function ServicesPage() {
     },
     {
       icon: Zap,
-      title: "CO2 & Therapy Laser",
+      title: "CO2 Surgical Laser",
       description:
-        "State-of-the-art laser technology for precise surgery and therapeutic treatments that promote faster healing.",
+        "State-of-the-art Aesculight CO2 laser technology for precise surgical procedures with less bleeding, reduced pain, and faster recovery.",
       color: "from-yellow-100 to-yellow-50",
+      learnMore: "/images/placeholders/Aesculight-veterinary-laser-comparison.pdf",
     },
     {
       icon: Microscope,
@@ -97,6 +104,7 @@ export default function ServicesPage() {
           priority
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
@@ -146,6 +154,16 @@ export default function ServicesPage() {
                   <CardDescription className="text-base text-gray-600">
                     {service.description}
                   </CardDescription>
+                  {service.learnMore && (
+                    <a
+                      href={service.learnMore}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm text-burgundy-500 hover:text-burgundy-600 mt-3 font-medium"
+                    >
+                      Learn more about our laser technology →
+                    </a>
+                  )}
                 </CardHeader>
               </Card>
             ))}

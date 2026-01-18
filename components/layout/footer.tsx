@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { navigation } from '@/config/navigation';
@@ -43,6 +44,16 @@ export function Footer() {
                 >
                   Prescription Refill
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://pocopsonvetstation.covetruspharmacy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-white transition-colors"
+                >
+                  Online Pharmacy
+                </a>
               </li>
             </ul>
           </div>
@@ -99,9 +110,19 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>
-            © {currentYear} Pocopson Veterinary Station. All rights reserved.
-          </p>
+          <div className="flex items-center justify-center gap-2">
+            <p>
+              © {currentYear} Pocopson Veterinary Station. All rights reserved.
+            </p>
+            <Image
+              src="/images/placeholders/dogcuteanimation31.gif"
+              alt="Cute dog wagging tail"
+              width={24}
+              height={24}
+              className="inline-block"
+              unoptimized
+            />
+          </div>
           <p className="mt-2 text-gray-500">
             Historic building established 1893 • Veterinary practice since 1991
           </p>

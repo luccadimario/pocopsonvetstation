@@ -77,6 +77,7 @@ export default function NewClientsPage() {
           priority
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
             <div className="inline-block bg-cream-100 text-burgundy-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
