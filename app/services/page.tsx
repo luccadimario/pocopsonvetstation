@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import {
   Activity,
+  Apple,
   Heart,
   Microscope,
   Pill,
@@ -24,7 +25,7 @@ export default function ServicesPage() {
     title: string;
     description: string;
     color: string;
-    learnMore?: string;
+    href: string;
   }[] = [
     {
       icon: Stethoscope,
@@ -32,6 +33,7 @@ export default function ServicesPage() {
       description:
         "Comprehensive health checkups, preventive care, and expert advice for keeping your pets healthy and happy.",
       color: "from-blue-100 to-blue-50",
+      href: "/services/wellness-exams",
     },
     {
       icon: Syringe,
@@ -39,6 +41,7 @@ export default function ServicesPage() {
       description:
         "Complete immunization programs tailored to your pet's lifestyle, age, and health needs.",
       color: "from-green-100 to-green-50",
+      href: "/services/vaccinations",
     },
     {
       icon: Activity,
@@ -46,6 +49,7 @@ export default function ServicesPage() {
       description:
         "Advanced surgical procedures performed with modern equipment and compassionate care, from routine spay/neuter to complex operations.",
       color: "from-purple-100 to-purple-50",
+      href: "/services/surgery",
     },
     {
       icon: Heart,
@@ -53,6 +57,7 @@ export default function ServicesPage() {
       description:
         "Digital dental X-rays, cleanings, and oral health treatments to keep your pet's smile bright and healthy.",
       color: "from-pink-100 to-pink-50",
+      href: "/services/dental-care",
     },
     {
       icon: Zap,
@@ -60,7 +65,7 @@ export default function ServicesPage() {
       description:
         "State-of-the-art Aesculight CO2 laser technology for precise surgical procedures with less bleeding, reduced pain, and faster recovery.",
       color: "from-yellow-100 to-yellow-50",
-      learnMore: "/images/placeholders/Aesculight-veterinary-laser-comparison.pdf",
+      href: "/services/laser-surgery",
     },
     {
       icon: Microscope,
@@ -68,6 +73,7 @@ export default function ServicesPage() {
       description:
         "In-house laboratory testing, digital X-rays, and advanced diagnostics for accurate, timely results.",
       color: "from-indigo-100 to-indigo-50",
+      href: "/services/diagnostics",
     },
     {
       icon: Pill,
@@ -75,6 +81,7 @@ export default function ServicesPage() {
       description:
         "On-site pharmacy with prescription medications, supplements, and preventive treatments.",
       color: "from-red-100 to-red-50",
+      href: "/services/pharmacy",
     },
     {
       icon: Scissors,
@@ -82,13 +89,15 @@ export default function ServicesPage() {
       description:
         "Permanent pet identification for peace of mind - because every pet deserves to find their way home.",
       color: "from-teal-100 to-teal-50",
+      href: "/services/microchipping",
     },
     {
-      icon: Heart,
+      icon: Apple,
       title: "Nutritional Counseling",
       description:
         "Expert dietary guidance to help your pet maintain a healthy weight and optimal nutrition.",
       color: "from-orange-100 to-orange-50",
+      href: "/services/nutrition",
     },
   ];
 
@@ -138,34 +147,26 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-xl transition-all hover:-translate-y-1"
-              >
-                <CardHeader>
-                  <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4`}
-                  >
-                    <service.icon className="h-8 w-8 text-burgundy-500" />
-                  </div>
-                  <CardTitle className="text-burgundy-600 text-xl">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-base text-gray-600">
-                    {service.description}
-                  </CardDescription>
-                  {service.learnMore && (
-                    <a
-                      href={service.learnMore}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-burgundy-500 hover:text-burgundy-600 mt-3 font-medium"
+              <Link key={index} href={service.href}>
+                <Card className="hover:shadow-xl transition-all hover:-translate-y-1 h-full cursor-pointer border-2 hover:border-burgundy-200">
+                  <CardHeader>
+                    <div
+                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4`}
                     >
-                      Learn more about our laser technology →
-                    </a>
-                  )}
-                </CardHeader>
-              </Card>
+                      <service.icon className="h-8 w-8 text-burgundy-500" />
+                    </div>
+                    <CardTitle className="text-burgundy-600 text-xl">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-base text-gray-600">
+                      {service.description}
+                    </CardDescription>
+                    <span className="inline-flex items-center text-sm text-burgundy-500 hover:text-burgundy-600 mt-3 font-medium">
+                      Learn more →
+                    </span>
+                  </CardHeader>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

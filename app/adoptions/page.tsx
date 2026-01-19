@@ -161,10 +161,10 @@ export default function AdoptionsPage() {
                     </a>
                   </Button>
                   <Button
-                    asChild
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-white/10"
+                    className="bg-white/10 border-white hover:bg-white/20"
+                    asChild
                   >
                     <Link href="/contact">Contact Us</Link>
                   </Button>

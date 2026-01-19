@@ -28,32 +28,38 @@ export default function Home() {
       title: "Wellness Exams",
       description:
         "Complete health checkups to keep your furry friends happy and healthy",
+      href: "/services/wellness-exams",
     },
     {
       icon: Syringe,
       title: "Vaccinations",
       description: "Protect your pets with gentle, caring immunizations",
+      href: "/services/vaccinations",
     },
     {
       icon: Activity,
       title: "Surgery",
       description: "Advanced surgical care with compassion and expertise",
+      href: "/services/surgery",
     },
     {
       icon: Heart,
       title: "Dental Care",
       description: "Bright smiles for healthy pets with digital dental X-rays",
+      href: "/services/dental-care",
     },
     {
       icon: Zap,
       title: "Surgical Laser",
       description:
         "Advanced CO2 laser surgery for precise, less invasive procedures",
+      href: "/services/laser-surgery",
     },
     {
       icon: Stethoscope,
       title: "Diagnostics",
       description: "Advanced testing to understand your pet's health",
+      href: "/services/diagnostics",
     },
   ];
 
@@ -151,22 +157,21 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-xl transition-all hover:-translate-y-1 border-2 hover:border-burgundy-200"
-              >
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-burgundy-100 to-burgundy-50 flex items-center justify-center mb-4">
-                    <service.icon className="h-7 w-7 text-burgundy-500" />
-                  </div>
-                  <CardTitle className="text-burgundy-600">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <Link key={index} href={service.href}>
+                <Card className="hover:shadow-xl transition-all hover:-translate-y-1 border-2 hover:border-burgundy-200 h-full cursor-pointer">
+                  <CardHeader>
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-burgundy-100 to-burgundy-50 flex items-center justify-center mb-4">
+                      <service.icon className="h-7 w-7 text-burgundy-500" />
+                    </div>
+                    <CardTitle className="text-burgundy-600">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
