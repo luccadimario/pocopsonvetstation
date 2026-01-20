@@ -182,7 +182,7 @@ export default function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
-
+              {/*
               <Card className="bg-blue-50 border-2 border-blue-200">
                 <CardContent className="p-6 text-center">
                   <MessageCircle className="h-12 w-12 text-blue-600 mx-auto mb-3" />
@@ -197,6 +197,7 @@ export default function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
+              */}
             </div>
           </div>
         </div>
