@@ -39,48 +39,66 @@ export default function PrescriptionRefillPage() {
     comments: "",
   });
 
-  const [requestedMedications, setRequestedMedications] = useState<MedicationEntry[]>([
-    { name: "", dosage: "", quantity: "" }
-  ]);
+  const [requestedMedications, setRequestedMedications] = useState<
+    MedicationEntry[]
+  >([{ name: "", dosage: "", quantity: "" }]);
 
-  const [currentMedications, setCurrentMedications] = useState<CurrentMedicationEntry[]>([
-    { name: "", dosage: "", lastDose: "" }
-  ]);
+  const [currentMedications, setCurrentMedications] = useState<
+    CurrentMedicationEntry[]
+  >([{ name: "", dosage: "", lastDose: "" }]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const addRequestedMedication = () => {
-    setRequestedMedications(prev => [...prev, { name: "", dosage: "", quantity: "" }]);
+    setRequestedMedications((prev) => [
+      ...prev,
+      { name: "", dosage: "", quantity: "" },
+    ]);
   };
 
   const removeRequestedMedication = (index: number) => {
     if (requestedMedications.length > 1) {
-      setRequestedMedications(prev => prev.filter((_, i) => i !== index));
+      setRequestedMedications((prev) => prev.filter((_, i) => i !== index));
     }
   };
 
-  const updateRequestedMedication = (index: number, field: keyof MedicationEntry, value: string) => {
-    setRequestedMedications(prev =>
-      prev.map((med, i) => i === index ? { ...med, [field]: value } : med)
+  const updateRequestedMedication = (
+    index: number,
+    field: keyof MedicationEntry,
+    value: string,
+  ) => {
+    setRequestedMedications((prev) =>
+      prev.map((med, i) => (i === index ? { ...med, [field]: value } : med)),
     );
   };
 
   const addCurrentMedication = () => {
-    setCurrentMedications(prev => [...prev, { name: "", dosage: "", lastDose: "" }]);
+    setCurrentMedications((prev) => [
+      ...prev,
+      { name: "", dosage: "", lastDose: "" },
+    ]);
   };
 
   const removeCurrentMedication = (index: number) => {
     if (currentMedications.length > 1) {
-      setCurrentMedications(prev => prev.filter((_, i) => i !== index));
+      setCurrentMedications((prev) => prev.filter((_, i) => i !== index));
     }
   };
 
-  const updateCurrentMedication = (index: number, field: keyof CurrentMedicationEntry, value: string) => {
-    setCurrentMedications(prev =>
-      prev.map((med, i) => i === index ? { ...med, [field]: value } : med)
+  const updateCurrentMedication = (
+    index: number,
+    field: keyof CurrentMedicationEntry,
+    value: string,
+  ) => {
+    setCurrentMedications((prev) =>
+      prev.map((med, i) => (i === index ? { ...med, [field]: value } : med)),
     );
   };
 
@@ -108,7 +126,9 @@ export default function PrescriptionRefillPage() {
       setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("There was an error submitting your request. Please try again or call us directly.");
+      alert(
+        "There was an error submitting your request. Please try again or call us directly.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -127,20 +147,31 @@ export default function PrescriptionRefillPage() {
                 Request Submitted!
               </h1>
               <p className="text-lg text-gray-600 mb-6">
-                Thank you for your prescription refill request. Our team will review it and contact you within 1-2 business days.
+                Thank you for your prescription refill request. Our team will
+                review it and contact you within 1-2 business days.
               </p>
               <p className="text-gray-600 mb-8">
                 If you need immediate assistance, please call us at{" "}
-                <a href={`tel:${siteConfig.contact.phone.replace(/[^0-9]/g, "")}`} className="text-burgundy-500 font-medium hover:text-burgundy-600">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/[^0-9]/g, "")}`}
+                  className="text-burgundy-500 font-medium hover:text-burgundy-600"
+                >
                   {siteConfig.contact.phone}
                 </a>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-burgundy-500 hover:bg-burgundy-600">
+                <Button
+                  asChild
+                  className="bg-burgundy-500 hover:bg-burgundy-600"
+                >
                   <Link href="/">Return Home</Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <a href="https://pocopsonvetstation.covetruspharmacy.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://pocopsonvetstation.covetruspharmacy.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Visit Online Pharmacy
                   </a>
                 </Button>
@@ -155,7 +186,7 @@ export default function PrescriptionRefillPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px] bg-gray-800">
+      <section className="relative h-[500px] bg-stone-300">
         <Image
           src="/images/placeholders/pazzo_slide_79.webp"
           alt="Prescription Refill"
@@ -171,7 +202,8 @@ export default function PrescriptionRefillPage() {
               Prescription Refill Request
             </h1>
             <p className="text-xl md:text-2xl text-white/95">
-              Request your pet's prescription refills online for your convenience
+              Request your pet's prescription refills online for your
+              convenience
             </p>
           </div>
         </div>
@@ -182,23 +214,42 @@ export default function PrescriptionRefillPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-700 mb-6">
-              Pocopson Veterinary Station is dedicated to providing the West Chester, PA community with the highest level of service. That's why we offer a fully stocked pharmacy to meet all your pet's needs.
+              Pocopson Veterinary Station is dedicated to providing the West
+              Chester, PA community with the highest level of service. That's
+              why we offer a fully stocked pharmacy to meet all your pet's
+              needs.
             </p>
             <p className="text-gray-600 mb-6">
-              We want you to get your medications and products from reputable, trusted suppliers, so we have stocked our pharmacy with a huge inventory of quality brands and products that are properly stored under optimal conditions.
+              We want you to get your medications and products from reputable,
+              trusted suppliers, so we have stocked our pharmacy with a huge
+              inventory of quality brands and products that are properly stored
+              under optimal conditions.
             </p>
             <p className="text-gray-600 mb-8">
-              We carry popular items like flea and tick preventatives, as well as heartworm preventatives and other medications. For your convenience, fill out and submit the form below to request your pet's prescription refill online.
+              We carry popular items like flea and tick preventatives, as well
+              as heartworm preventatives and other medications. For your
+              convenience, fill out and submit the form below to request your
+              pet's prescription refill online.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="outline" className="border-burgundy-500 text-burgundy-600">
-                <a href={`tel:${siteConfig.contact.phone.replace(/[^0-9]/g, "")}`}>
+              <Button
+                asChild
+                variant="outline"
+                className="border-burgundy-500 text-burgundy-600"
+              >
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/[^0-9]/g, "")}`}
+                >
                   <Phone className="h-4 w-4 mr-2" />
                   Call Us: {siteConfig.contact.phone}
                 </a>
               </Button>
               <Button asChild variant="outline">
-                <a href="https://pocopsonvetstation.covetruspharmacy.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://pocopsonvetstation.covetruspharmacy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Pill className="h-4 w-4 mr-2" />
                   Visit Online Pharmacy
                 </a>
@@ -332,7 +383,8 @@ export default function PrescriptionRefillPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    How would you like to receive your medications? <span className="text-red-500">*</span>
+                    How would you like to receive your medications?{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="receivingMeds"
@@ -356,7 +408,8 @@ export default function PrescriptionRefillPage() {
                   Requested Prescription Refills
                 </CardTitle>
                 <p className="text-sm text-gray-600">
-                  Please list the names, dosages and quantities of the medication(s) you are requesting.
+                  Please list the names, dosages and quantities of the
+                  medication(s) you are requesting.
                 </p>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -366,17 +419,35 @@ export default function PrescriptionRefillPage() {
                       <Input
                         placeholder="Medication Name"
                         value={med.name}
-                        onChange={(e) => updateRequestedMedication(index, "name", e.target.value)}
+                        onChange={(e) =>
+                          updateRequestedMedication(
+                            index,
+                            "name",
+                            e.target.value,
+                          )
+                        }
                       />
                       <Input
                         placeholder="Dosage / Strength"
                         value={med.dosage}
-                        onChange={(e) => updateRequestedMedication(index, "dosage", e.target.value)}
+                        onChange={(e) =>
+                          updateRequestedMedication(
+                            index,
+                            "dosage",
+                            e.target.value,
+                          )
+                        }
                       />
                       <Input
                         placeholder="Quantity"
                         value={med.quantity}
-                        onChange={(e) => updateRequestedMedication(index, "quantity", e.target.value)}
+                        onChange={(e) =>
+                          updateRequestedMedication(
+                            index,
+                            "quantity",
+                            e.target.value,
+                          )
+                        }
                       />
                     </div>
                     {requestedMedications.length > 1 && (
@@ -412,7 +483,9 @@ export default function PrescriptionRefillPage() {
                   Your Pet's Current Medications
                 </CardTitle>
                 <p className="text-sm text-gray-600">
-                  Please list the names and amounts of any medication your pet is currently receiving. Also include the time your pet last received each medication.
+                  Please list the names and amounts of any medication your pet
+                  is currently receiving. Also include the time your pet last
+                  received each medication.
                 </p>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -422,17 +495,31 @@ export default function PrescriptionRefillPage() {
                       <Input
                         placeholder="Medication Name"
                         value={med.name}
-                        onChange={(e) => updateCurrentMedication(index, "name", e.target.value)}
+                        onChange={(e) =>
+                          updateCurrentMedication(index, "name", e.target.value)
+                        }
                       />
                       <Input
                         placeholder="Dosage / Strength"
                         value={med.dosage}
-                        onChange={(e) => updateCurrentMedication(index, "dosage", e.target.value)}
+                        onChange={(e) =>
+                          updateCurrentMedication(
+                            index,
+                            "dosage",
+                            e.target.value,
+                          )
+                        }
                       />
                       <Input
                         placeholder="Time of Last Dose"
                         value={med.lastDose}
-                        onChange={(e) => updateCurrentMedication(index, "lastDose", e.target.value)}
+                        onChange={(e) =>
+                          updateCurrentMedication(
+                            index,
+                            "lastDose",
+                            e.target.value,
+                          )
+                        }
                       />
                     </div>
                     {currentMedications.length > 1 && (
@@ -468,7 +555,8 @@ export default function PrescriptionRefillPage() {
                   Comments
                 </CardTitle>
                 <p className="text-sm text-gray-600">
-                  If you have noticed any changes in your pet's health or behavior, please comment below.
+                  If you have noticed any changes in your pet's health or
+                  behavior, please comment below.
                 </p>
               </CardHeader>
               <CardContent>
@@ -493,7 +581,8 @@ export default function PrescriptionRefillPage() {
                 {isSubmitting ? "Submitting..." : "Submit Refill Request"}
               </Button>
               <p className="text-sm text-gray-500 mt-4">
-                We will contact you within 1-2 business days to confirm your request.
+                We will contact you within 1-2 business days to confirm your
+                request.
               </p>
             </div>
           </form>

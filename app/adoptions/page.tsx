@@ -9,7 +9,7 @@ export default function AdoptionsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px] bg-gray-800">
+      <section className="relative h-[500px] bg-stone-300">
         <Image
           src="/images/placeholders/pazzo_slide_77.webp"
           alt="Adoptable pets"

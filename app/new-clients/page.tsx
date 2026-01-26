@@ -68,7 +68,7 @@ export default function NewClientsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px] bg-gray-800">
+      <section className="relative h-[500px] bg-stone-300">
         <Image
           src="/images/placeholders/pazzo-slide-09.webp"
           alt="Happy pet owner with dog at Pocopson Vet"
