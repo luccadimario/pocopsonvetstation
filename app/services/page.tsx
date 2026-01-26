@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import heroImage from "@/public/images/placeholders/pazzo_slide_77.jpg";
 
 export default function ServicesPage() {
   const services: {
@@ -104,14 +105,15 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px] bg-gray-800">
+      <section className="relative h-[500px] bg-stone-300">
         <Image
-          src="/images/placeholders/pazzo_slide_77.jpg"
+          src={heroImage}
           alt="Veterinarian caring for happy pets"
           fill
           className="object-cover"
           priority
           sizes="100vw"
+          placeholder="blur"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">

@@ -3,19 +3,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Heart, Home, Users, Gift, Scissors } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import heroImage from "@/public/images/placeholders/pvs_q55.webp";
+import historyImage from "@/public/images/placeholders/pazzo_slide_77.webp";
 
 export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[500px] bg-gray-800">
+      <section className="relative h-[500px] bg-stone-300">
         <Image
-          src="/images/placeholders/pvs_q55.webp"
+          src={heroImage}
           alt="Happy pet owner with dog at Pocopson Vet"
           fill
           className="object-cover"
           priority
           sizes="100vw"
+          placeholder="blur"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
@@ -90,13 +93,14 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gray-700">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-stone-300">
               <Image
-                src="/images/placeholders/pazzo_slide_77.webp"
+                src={historyImage}
                 alt="Historic train station building at Pocopson Vet"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                placeholder="blur"
               />
             </div>
           </div>

@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import heroImage from "@/public/images/placeholders/pazzo_slide_74.webp";
+import historyImage from "@/public/images/placeholders/pazzo-slide-09.webp";
 
 export default function Home() {
   const services = [
@@ -84,14 +86,15 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section with Background Image */}
-      <section className="relative h-[600px] md:h-[700px] bg-gray-800">
+      <section className="relative h-[600px] md:h-[700px] bg-stone-300">
         <Image
-          src="/images/placeholders/pazzo_slide_74.webp"
+          src={heroImage}
           alt="Pocopson Veterinary Station - Historic railroad building"
           fill
           className="object-cover"
           priority
           sizes="100vw"
+          placeholder="blur"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 via-30% to-transparent to-60%" />
         <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
@@ -190,13 +193,14 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl bg-gray-700">
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl bg-stone-300">
               <Image
-                src="/images/placeholders/pazzo-slide-09.webp"
+                src={historyImage}
                 alt="Historic train station at Pocopson Vet"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                placeholder="blur"
               />
             </div>
             <div>
