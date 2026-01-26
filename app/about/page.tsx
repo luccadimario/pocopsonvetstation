@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Award, Heart, Home, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Award, Heart, Home, Users, Gift, Scissors } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -153,6 +154,80 @@ export default function AboutPage() {
               </h3>
               <p className="text-gray-600">
                 Proud to serve West Chester families
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Veterinary Specials */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-burgundy-100 text-burgundy-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Special Offers
+              </div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                Our Veterinary Specials 🎁
+              </h2>
+              <p className="text-xl text-gray-600">
+                We're committed to making quality veterinary care accessible and
+                rewarding responsible pet ownership
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center mb-6">
+                    <Gift className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-burgundy-600 mb-4">
+                    Rescued Pet Special
+                  </h3>
+                  <p className="text-gray-700 mb-4 text-lg">
+                    <strong>Complimentary Exam</strong> for any rescued pet
+                  </p>
+                  <p className="text-gray-600">
+                    We believe in supporting pet adoption! Bring in your newly
+                    adopted furry friend for a free wellness exam to start their
+                    journey with you on the right paw.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center mb-6">
+                    <Scissors className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-burgundy-600 mb-4">
+                    Free Nail Trim
+                  </h3>
+                  <p className="text-gray-700 mb-4 text-lg">
+                    <strong>Complimentary Nail Trim</strong> with any doctor's
+                    appointment
+                  </p>
+                  <p className="text-gray-600">
+                    Keep your pet's paws healthy! Every time you visit us for a
+                    doctor's appointment, we'll trim your pet's nails at no
+                    additional charge.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-8 bg-gradient-to-br from-burgundy-50 to-cream-50 rounded-2xl p-6 text-center">
+              <p className="text-gray-700 text-lg">
+                Have questions about our specials?{" "}
+                <Link
+                  href="/contact"
+                  className="text-burgundy-600 font-semibold hover:underline"
+                >
+                  Contact us
+                </Link>{" "}
+                or call when booking your appointment!
               </p>
             </div>
           </div>

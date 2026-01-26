@@ -49,50 +49,118 @@ export default function AdoptionsPage() {
               </p>
             </div>
 
-            {/* Andy's Friends */}
-            <Card className="mb-12 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative min-h-[250px] bg-gradient-to-br from-burgundy-50 to-cream-50">
-                    <Image
-                      src="/images/placeholders/andysfriends.png"
-                      alt="Andy's Friends"
-                      fill
-                      className="object-contain p-6"
-                    />
-                  </div>
-                  <div className="p-8">
-                    <p className="text-gray-700 mb-4">
-                      <strong>Andy's Friends</strong> is a rescue that provides
-                      food, medical services, and safe housing to homeless cats
-                      and kittens until loving homes can be found.
-                    </p>
-                    <p className="text-gray-600 mb-4">
-                      Their cats are owner surrenders, strays, and rescues from
-                      shelters where adoptable animals are in danger of being
-                      euthanized.
-                    </p>
-                    <p className="text-gray-600 mb-6">
-                      Their mission is to save as many lives as they can through
-                      fostering and adoption.
-                    </p>
-                    <Button
-                      asChild
-                      className="bg-burgundy-500 hover:bg-burgundy-600"
-                    >
-                      <a
-                        href="https://www.facebook.com/Andys-Friends-Cat-Rescue-310aborinesfriends"
-                        target="_blank"
-                        rel="noopener noreferrer"
+            {/* Rescue Organizations */}
+            <div className="space-y-8 mb-12">
+              {/* Andy's Friends */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="relative min-h-[250px] bg-gradient-to-br from-burgundy-50 to-cream-50">
+                      <Image
+                        src="/images/placeholders/andysfriends.png"
+                        alt="Andy's Friends"
+                        fill
+                        className="object-contain p-6"
+                      />
+                    </div>
+                    <div className="p-8">
+                      <p className="text-gray-700 mb-4">
+                        <strong>Andy's Friends</strong> is a rescue that
+                        provides food, medical services, and safe housing to
+                        homeless cats and kittens until loving homes can be
+                        found.
+                      </p>
+                      <p className="text-gray-600 mb-4">
+                        Their cats are owner surrenders, strays, and rescues
+                        from shelters where adoptable animals are in danger of
+                        being euthanized.
+                      </p>
+                      <p className="text-gray-600 mb-6">
+                        Their mission is to save as many lives as they can
+                        through fostering and adoption.
+                      </p>
+                      <Button
+                        asChild
+                        className="bg-burgundy-500 hover:bg-burgundy-600"
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Learn More About Andy's Friends
-                      </a>
-                    </Button>
+                        <a
+                          href="https://www.facebook.com/Andys-Friends-Cat-Rescue-310aborinesfriends"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Learn More About Andy's Friends
+                        </a>
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+
+              {/* Kitty Cat Cafe */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-heading font-bold text-burgundy-600 mb-4">
+                    Kitty Cat Cafe - Kennett Square
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    The <strong>Kitty Cat Cafe</strong> in Kennett Square is a
+                    unique adoption center and cafe where you can enjoy time
+                    with adoptable cats while supporting their rescue and
+                    rehoming efforts.
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    Visit their location to meet friendly felines looking for
+                    their forever homes in a comfortable, welcoming environment.
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-burgundy-500 hover:bg-burgundy-600"
+                  >
+                    <a
+                      href="https://www.kittycatcafe.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Visit Kitty Cat Cafe
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Lucky Dawg */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-heading font-bold text-burgundy-600 mb-4">
+                    Lucky Dawg Animal Rescue
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Lucky Dawg Animal Rescue</strong> is dedicated to
+                    rescuing and rehoming dogs in need, giving them a second
+                    chance at a happy life with loving families.
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    Their team works tirelessly to provide medical care,
+                    fostering, and support to help dogs find their perfect
+                    forever homes.
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-burgundy-500 hover:bg-burgundy-600"
+                  >
+                    <a
+                      href="https://www.luckydawganimalrescue.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Learn More About Lucky Dawg
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
 
             {/* How We Help */}
             <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 mb-12">
