@@ -86,7 +86,7 @@ export default function OurTeamPage() {
       {/* Hero */}
       <section className="relative h-[500px] bg-gray-800">
         <Image
-          src="/images/placeholders/pazzo_slide_79.webp"
+          src="/images/placeholders/pazzo-slide-09.webp"
           alt="Our caring team at Pocopson Veterinary Station"
           fill
           className="object-cover"
