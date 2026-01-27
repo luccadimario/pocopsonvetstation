@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/config/navigation";
@@ -10,6 +11,12 @@ import { siteConfig } from "@/config/site";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
@@ -40,8 +47,19 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-gray-700 transition-colors hover:text-burgundy-500"
+              className={`text-sm font-medium transition-colors hover:text-burgundy-500 flex items-center gap-1.5 ${
+                isActive(item.href) ? "text-burgundy-500" : "text-gray-700"
+              }`}
             >
+              {isActive(item.href) && (
+                <Image
+                  src="/images/placeholders/paw.png"
+                  alt=""
+                  width={16}
+                  height={16}
+                  className="flex-shrink-0"
+                />
+              )}
               {item.name}
             </Link>
           ))}
@@ -84,9 +102,20 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-gray-700 hover:text-burgundy-500"
+                className={`text-base font-medium hover:text-burgundy-500 flex items-center gap-2 ${
+                  isActive(item.href) ? "text-burgundy-500" : "text-gray-700"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
+                {isActive(item.href) && (
+                  <Image
+                    src="/images/placeholders/paw.png"
+                    alt=""
+                    width={18}
+                    height={18}
+                    className="flex-shrink-0"
+                  />
+                )}
                 {item.name}
               </Link>
             ))}
